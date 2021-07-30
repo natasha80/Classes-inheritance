@@ -1,3 +1,4 @@
+const listOfTypes = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
 export default class Character {
   constructor(name, type) {
     if (typeof name !== 'string') {
@@ -5,8 +6,6 @@ export default class Character {
     } else if (name.length < 2 || name.length > 10) {
       throw new Error('The name must be between 2 and 10 characters!');
     }
-
-    const listOfTypes = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
 
     if (!listOfTypes.includes(type)) {
       throw new Error('The type must be selected from the list of suggested types!');
